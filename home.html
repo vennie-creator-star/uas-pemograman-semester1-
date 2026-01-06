@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+         background-color: #0a0a0c;
+         color: #e0e0e0;
+         font-family: 'Roboto', sans-serif;
+         overflow-x: hidden;
+        }
+        
+        .header {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,12,1)), 
+            url(foto/banner.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 80px;
+            letter-spacing: 10px;
+            color: #FF1A1A;
+            text-shadow: 0 0 20px #FF1A1A;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            letter-spacing: 5px;
+            color: white;
+        }
+        
+        #jam-digital {
+            margin-top: 20px;
+            font-weight: 300;
+            color: #ff3e3e;
+            letter-spacing: 2px;
+        }
+        
+        .nav {
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav a {
+            color: #bbb;
+            text-decoration: none;
+            padding: 20px 40px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.4s;
+        }
+    
+        .nav a:hover {
+            color: #FF1A1A;
+            background: rgba(255, 255, 255, 0.05);
+        }
+    
+        .nav a.active {
+            border-bottom: 3px solid #FF1A1A;
+            color: #FF1A1A;
+        }
+    
+        .container {
+            padding: 50px 0;
+        }
+    
+        .content-card {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #16161a;
+            display: flex;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+    
+        .image-wrapper {
+            flex: 1;
+        }
+    
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%) contrast(120%);
+            transition: 0.5s;
+        }
+        
+        .image-wrapper img:hover {
+            filter: grayscale(0%) contrast(100%);
+        }
+        
+        .text-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .text-content h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 35px;
+            color:#FF1A1A;
+            margin-bottom: 15px;
+        }
+    
+        .text-content p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+    
+        .btn-info {
+            padding: 12px 25px;
+            background: transparent;
+            border: 1px solid #FF1A1A;
+            color: #FF1A1A;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            width: fit-content;
+        }
+    
+        .btn-info:hover {
+            background: #FF1A1A;
+            color: black;
+        }
+    
+        .footer {
+            padding: 30px;
+            text-align: center;
+            background: #050505;
+            font-size: 13px;
+            color: #666;
+            border-top: 1px solid #222;
+        }
+    
+        .footer span {
+            color: #FF1A1A;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="banner-content">
+            <h1>MONARCH</h1>
+            <p class="subtitle">SECRETS BENEATH THE SURFACE</p>
+            <div id="jam-digital"></div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <a href="home.html" class="active">HOME</a>
+        <a href="content.html">CONTENT</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="formulir.html">REGISTRATION</a>
+    </nav>
+
+
+    <main class="container">
+        <div class="content-card">
+            <div class="image-wrapper">
+                <img src="foto/monarch.jpg">
+            </div>
+            <div class="text-content">
+                <h2>The Monarch Organization</h2>
+                <p>
+                    Monarch is a secret scientific organization founded in the 1940s to investigate unexplained natural phenomena. Beneath its public image as a research institution, Monarch’s true purpose is to study and monitor ancient giant creatures known as Titans, such as Godzilla and Kong. The organization believes these beings are not monsters, but primordial forces vital to maintaining Earth’s natural balance.
+                </p>
+                <p>
+                    Despite its scientific mission, Monarch operates in moral gray areas. It conceals information from the public, conducts high-risk experiments, and makes controversial decisions in the name of global stability. As both a guardian and a threat, Monarch represents humanity’s struggle to understand whether nature should be controlled or respected and coexisted with.
+                </p>
+                <button class="btn-info">Buka Arsip Data</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2026 | <span>Muhammad Falyasta Lutfi</span> | <span>NIM: 251011700049</span> | <span>Kelas: 01SIFP001</span></p>
+    </footer>
+
+    <script>
+             function updateClock() {
+        const now = new Date();
+        const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+     };
+        document.getElementById('jam-digital').innerHTML = "SYSTEM STATUS: ONLINE | " + now.toLocaleDateString('id-ID', options);   }
+        setInterval(updateClock, 1000);
+        updateClock();  
+    </script>
+</body>
+</html>
