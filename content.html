@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: darkgray;
+        }
+             .header {
+                height: 400px;
+                background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,12,1)), 
+                url(foto/banner.jpg);
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .header h1 {
+                font-family: 'Bebas Neue', cursive;
+                font-size: 80px;
+                letter-spacing: 10px;
+                color: #FF1A1A;
+                text-shadow: 0 0 20px #FF1A1A;
+            }
+    
+            .subtitle {
+                font-size: 20px;
+                letter-spacing: 5px;
+                color: white;
+            }
+            #jam-digital {
+                margin-top: 20px;
+                font-weight: 300;
+                color: #ff3e3e;
+                letter-spacing: 2px;
+            }
+            .nav {
+                background-color: rgba(0, 0, 0, 0.9);
+                display: flex;
+                justify-content: center;
+                border-bottom: 2px solid #333;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            .nav a {
+                color: #bbb;
+                text-decoration: none;
+                padding: 20px 40px;
+                font-weight: bold;
+                font-size: 14px;
+                transition: 0.4s;
+            }
+    
+            .nav a:hover {
+                color: #FF1A1A;
+                background: rgba(255, 255, 255, 0.05);
+            }
+    
+            .nav a.active {
+                border-bottom: 3px solid #FF1A1A;
+                color: #FF1A1A;
+            }
+            .content {
+                display: flex;
+                gap: 40px;
+                align-items: stretch;
+                background: #111116;
+                border-radius: 15px;
+                border: 1px solid #FF1A1A;
+                overflow: hidden;
+                box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            }
+
+            .kaiju-image-box {
+                flex: 1;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .kaiju-image-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.5s;
+            }
+
+            .kaiju-image-box:hover img {
+                transform: scale(1.05);
+            }
+
+            .image-overlay-text {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                background: rgba(0, 212, 255, 0.8);
+                color: black;
+                padding: 5px 15px;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+
+            .kaiju-info-text {
+                flex: 1;
+                padding: 50px;
+                color: #e0e0e0;
+            }
+
+            .category {
+                font-size: 14px;
+                color: #ff3e3e;
+                letter-spacing: 3px;
+                margin-bottom: 10px;
+            }
+
+            .kaiju-info-text h3 {
+                font-size: 32px;
+                color: #00d4ff;
+                margin-bottom: 20px;
+            }
+
+            .kaiju-info-text hr {
+                border: 0;
+                border-top: 1px solid #333;
+                margin-bottom: 25px;
+            }
+
+            .kaiju-info-text p {
+                line-height: 1.8;
+                margin-bottom: 20px;
+                text-align: justify;
+            }
+
+            .kaiju-info-text ul {
+                list-style: none;
+                margin-bottom: 30px;
+            }
+
+            .kaiju-info-text ul li {
+                margin-bottom: 10px;
+                padding-left: 20px;
+                position: relative;
+            }
+
+            .kaiju-info-text ul li::before {
+                content: "◢";
+                position: absolute;
+                left: 0;
+                color: #00d4ff;
+                font-size: 12px;
+            }
+
+            .data-status {
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                font-family: monospace;
+                color: #666;
+                border-top: 1px solid #333;
+                padding-top: 20px;
+            }
+            .pagination-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+
+            .pagination-numbers {
+                display: flex;
+                gap: 10px;
+            }
+
+            .page-num {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                text-decoration: none;
+                color: #FF1A1A;
+                border: 1px solid #FF1A1A;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                background: rgba(0, 212, 255, 0.05);
+            }
+
+            .page-num:hover {
+                background-color: black;
+                color: #FF1A1A;
+                border-color: black;
+                box-shadow: 0 0 10px rgba(255, 62, 62, 0.5);
+                transform: translateY(-3px);
+            }
+
+            .page-num.active {
+                background-color: black;
+                color: black;
+                box-shadow: 0 0 15px black;
+            }
+
+        .footer {
+            padding: 30px;
+            text-align: center;
+            background: #050505;
+            font-size: 13px;
+            color: #666;
+            border-top: 1px solid #222;}.footer span {
+            color: #FF1A1A;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+        <div class="banner-content">
+            <h1>MONARCH DATABASE</h1>
+            <p class="subtitle">PROJECT: MONSTERVERSE ARCHIVE</p>
+            <div id="jam-digital"></div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <a href="home.html">HOME</a>
+        <a href="content.html" class="active">CONTENT</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="formulir.html">REGISTRATION</a>
+    </nav>
+
+    <main class="container">
+        <div class="content">
+            <div class="kaiju-image-box">
+                <img src="foto/godzilla2.jpg" alt="Godzilla Main">
+                <div class="image-overlay-text">TITANUS GOJIRA</div>
+            </div>
+
+            <div class="kaiju-info-text">
+                <h2 class="category">CLASSIFIED DATA</h2>
+                <h3>Godzilla: The Ancient Alpha</h3>
+                <hr>
+                <p>
+                    Godzilla is an ancient alpha Titan that originated during a primordial era when Earth’s surface was saturated with extreme levels of natural radiation. He functions as the planet’s apex predator, enforcing balance by eliminating Titans that threaten the natural order.
+                </p>
+                <p>
+                    <strong>Primary Abilities:</strong>
+                </p>
+                <ul>
+                    <li><strong>Atomic Breath:</strong> A concentrated beam of blue radioactive energy capable of vaporizing or severely injuring other Titans.</li>
+                    <li><strong>Extreme Durability: Possesses</strong>Possesses near-impenetrable skin and skeletal density, rendering conventional human weaponry largely ineffective.</li>
+                    <li><strong>Bio-Nuclear Physiology:</strong>Absorbs and metabolizes radiation as a primary energy source, allowing rapid recovery and power amplification.</li>
+                    <li><strong>Dorsal Plate Bioluminescence:</strong>
+                    His dorsal fins emit a neon-blue glow when charging or releasing atomic energy.</li>
+                    <li><strong>Alpha Dominance:</strong>
+                    Emits a powerful bio-acoustic signal that can assert dominance over or command other Titans.</li>
+                </ul>
+                <div class="data-status">
+                    <span>SECURITY LEVEL: 05</span>
+                    <span>THREAT LEVEL: CRITICAL</span>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+    </div>
+
+<div class="pagination-container">
+    <div class="pagination-numbers">
+        <a href="content.html" class="page-num">1</a>
+        <a href="halaman2.html" class="page-num">2</a>
+        <a href="halaman3.html" class="page-num">3</a>
+        <a href="halaman4.html" class="page-num">4</a>
+    </div>
+</div>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2026 | <span>Muhammad Falyasta Lutfi</span> | <span>NIM: 251011700049</span> | <span>Kelas: 01SIFP001</span></p>
+    </footer>
+
+    <script>
+        function updateClock() {
+        const now = new Date();
+        const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+     };
+        document.getElementById('jam-digital').innerHTML = "SYSTEM STATUS: ONLINE | " + now.toLocaleDateString('id-ID', options);   }
+        setInterval(updateClock, 1000);
+        updateClock(); 
+    </script>
+</body>
+</html>

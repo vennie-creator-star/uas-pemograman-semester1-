@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                body{
+            margin: 0;
+            background-color: darkgray;
+        }
+             .header {
+                height: 400px;
+                background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,12,1)), 
+                url(foto/banner.jpg);
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .header h1 {
+                font-family: 'Bebas Neue', cursive;
+                font-size: 80px;
+                letter-spacing: 10px;
+                color: #FF1A1A;
+                text-shadow: 0 0 20px #FF1A1A;
+            }
+    
+            .subtitle {
+                font-size: 20px;
+                letter-spacing: 5px;
+                color: white;
+            }
+            #jam-digital {
+                margin-top: 20px;
+                font-weight: 300;
+                color: #ff3e3e;
+                letter-spacing: 2px;
+            }
+            .nav {
+                background-color: rgba(0, 0, 0, 0.9);
+                display: flex;
+                justify-content: center;
+                border-bottom: 2px solid #333;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            .nav a {
+                color: #bbb;
+                text-decoration: none;
+                padding: 20px 40px;
+                font-weight: bold;
+                font-size: 14px;
+                transition: 0.4s;
+            }
+    
+            .nav a:hover {
+                color: #FF1A1A;
+                background: rgba(255, 255, 255, 0.05);
+            }
+    
+            .nav a.active {
+                border-bottom: 3px solid #FF1A1A;
+                color: #FF1A1A;
+            }
+
+            .militaryform {
+                max-width: 800px;
+                margin: 0 auto;
+                background: #0d0d0f;
+                border: 2px solid #333;
+                padding: 30px;
+                position: relative;
+                font-family: 'Share Tech Mono', monospace; /* Font bergaya data */
+            }
+
+            .military-form-container::before {
+                content: "";
+                position: absolute;
+                top: -5px; left: -5px; width: 20px; height: 20px;
+                border-top: 3px solid #00d4ff; border-left: 3px solid #00d4ff;
+            }
+
+            .form-header {
+                border-bottom: 1px solid #00d4ff;
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+
+            .serial-number { 
+                color: #666; font-size: 12px; 
+            }
+
+            .form-row { 
+                display: flex; gap: 20px; 
+            }
+            .flex-2 { 
+                flex: 2; 
+            }
+            .flex-1 { 
+                flex: 1; 
+            }
+
+            .form-group { 
+                margin-bottom: 25px; 
+            }
+
+            .form-group label {
+                display: block;
+                color: #00d4ff;
+                font-size: 14px;
+                margin-bottom: 8px;
+                letter-spacing: 2px;
+            }
+
+            .monarch-form input[type="text"],
+            .monarch-form input[type="email"],
+            .monarch-form select,
+            .monarch-form textarea {
+                width: 100%;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid #444;
+                padding: 12px;
+                color: #00d4ff;
+                border-radius: 0;
+                font-family: inherit;
+            }
+
+            .monarch-form input:focus {
+                border-color: #00d4ff;
+                box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+            }
+            .radio-wrap {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                height: 45px;
+            }
+            .form-actions { 
+                display: flex; gap: 15px; 
+            }
+
+            .btn-military {
+                padding: 15px 30px;
+                font-family: inherit;
+                font-weight: bold;
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: 0.3s;
+            }
+
+            .btn-military.submit {
+                background: #00d4ff;
+                border: none;
+                color: #000;
+            }
+
+            .btn-military.reset {
+                background: transparent;
+                border: 1px solid #ff3e3e;
+                color: #ff3e3e;
+            }
+
+            .btn-military.submit:hover {
+                background: #fff;
+                box-shadow: 0 0 20px #00d4ff;
+            }
+            
+            .footer {
+            padding: 30px;
+            text-align: center;
+            background: #050505;
+            font-size: 13px;
+            color: #666;
+            border-top: 1px solid #222;}.footer span {
+            color: #FF1A1A;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Monarch - Confidential Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="banner-content">
+            <h1>MONARCH RECRUITMENT</h1>
+            <p class="subtitle">CONFIDENTIAL: ACCESS GRANTED</p>
+            <div id="jam-digital"></div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <a href="home.html">HOME</a>
+        <a href="content.html">CONTENT</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="formulir.html" class="active" >REGISTRATION </a>
+    </nav>
+
+    <main class="container">
+        <div class="militaryform">
+            <div class="form-header">
+                <span class="serial-number">REF NO: MON-2026-X</span>
+                <h2>FIELD AGENT APPLICATION</h2>
+            </div>
+            
+            <form action="#" method="post" class="monarch-form">
+                
+                <div class="form-row">
+                    <div class="form-group flex-2">
+                        <label>FULL NAME</label>
+                        <input type="text" placeholder="TYPE YOUR NAME..." required>
+                    </div><br>
+                    <div class="form-group flex-1">
+                        <label>GENDER</label>
+                        <div class="radio-wrap">
+                            <input type="radio" name="jk" id="m"> <label for="m">M</label>
+                            <input type="radio" name="jk" id="f"> <label for="f">F</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>EMAIL ADDRESS</label>
+                    <input type="email" placeholder="SECURE_COMM@MONARCH.ORG" required>
+                </div>
+
+                <div class="form-group">
+                    <label>ASSIGNMENT DIVISION</label>
+                    <select>
+                        <option>TITAN BIOLOGY</option>
+                        <option>GEO-THERMAL RESEARCH</option>
+                        <option>CONTAINMENT UNIT</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>FIELD EXPERTISE</label>
+                    <div class="checkbox-wrap">
+                        <label><input type="checkbox"> NUCLEAR PHYSICS</label>
+                        <label><input type="checkbox"> CRYPTOZOOLOGY</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>STATEMENT OF PURPOSE</label>
+                    <textarea rows="4" placeholder="WHY DO YOU SEEK THE TRUTH?"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-military submit">TRANSMIT DATA</button>
+                    <button type="reset" class="btn-military reset">ABORT</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2026 | <span>Muhammad Falyasta Lutfi</span> | <span>NIM: 251011700049</span> | <span>Kelas: 01SIFP001</span></p>
+    </footer>
+
+    <script>
+                function updateClock() {
+        const now = new Date();
+        const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+     };
+        document.getElementById('jam-digital').innerHTML = "SYSTEM STATUS: ONLINE | " + now.toLocaleDateString('id-ID', options);   }
+        setInterval(updateClock, 1000);
+        updateClock(); 
+    </script>
+</body>
+</html>
+</body>
+</html>
